@@ -1,0 +1,39 @@
+# Fraud Detection & Financial Wellness Copilot - Python dependencies
+#
+# Python 3.11 or newer. Install with:   pip install -r requirements.txt
+# The version numbers are lower bounds: the versions the project was developed and run with.
+# PyTorch is used on the CPU only (no GPU needed).
+
+# --- data handling and statistics
+pandas>=3.0
+numpy>=2.0
+scipy>=1.14
+statsmodels>=0.14
+
+# --- machine learning
+scikit-learn>=1.5
+torch>=2.5
+
+# --- plotting
+matplotlib>=3.9
+seaborn>=0.13
+pillow>=10.0
+
+# --- database (PostgreSQL runs in Docker, see docker-compose.yml)
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# --- data download and the AI agent
+requests>=2.31
+anthropic>=2.8
+
+# --- notebook environment
+jupyterlab>=4.0
+ipykernel>=6.0
+
+# --- optional
+imbalanced-learn>=0.12       # SMOTE comparison in section 4.1 (the notebook skips it if missing)
+pypdf>=4.0                   # read PDF guides placed in knowledge_base/
+# sentence-transformers      # RAG_BACKEND=embeddings (semantic retrieval; not tested in this project)
+# faiss-cpu                  # RAG_BACKEND=embeddings
+# kaggle                     # download the data set from the command line

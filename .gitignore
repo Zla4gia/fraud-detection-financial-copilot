@@ -1,0 +1,20 @@
+# secrets and local settings
+.env
+
+# data (download it yourself, see data/README.md) and local databases
+data/*.csv
+*.db
+
+# Jupyter and Python leftovers
+.ipynb_checkpoints/
+.virtual_documents/
+Untitled*.ipynb
+__pycache__/
+*.pyc
+
+# earlier working copies of the notebook
+*- run *.ipynb
+
+# personal working notes (not part of the project)
+Fraud Copilot - Notes.md
+presentation_outline.md

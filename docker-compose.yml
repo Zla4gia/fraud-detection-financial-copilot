@@ -1,0 +1,15 @@
+# PostgreSQL for the Fraud Copilot project. Port 5433 so it does not clash with other projects' databases on 5432.
+services:
+  postgres:
+    image: postgres:16
+    container_name: fraud-postgres
+    environment:
+      POSTGRES_USER: proj
+      POSTGRES_HOST_AUTH_METHOD: trust      # no password: local development only
+      POSTGRES_DB: fraud_copilot
+    ports:
+      - "5433:5432"
+    volumes:
+      - fraud_pgdata:/var/lib/postgresql/data
+volumes:
+  fraud_pgdata:
